@@ -1,1 +1,1 @@
-coding practise on react js
+coding practise on react js using vite blunder
