@@ -37,7 +37,7 @@ function App() {
       }}
     >
       <div className="w-full">
-        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm ">
+        <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm hover:backdrop-blur-lg ">
           <form
             onSubmit={(e) => {
               e.preventDefault();
@@ -49,7 +49,7 @@ function App() {
                 label="From"
                 amount={amount}
                 currencyOptions={options}
-                onCurrencyChange={(currency) => setAmount(amount)}
+                onCurrencyChange={(currency) => setFrom(currency)}
                 selectCurrency={from}
                 onAmountChange={(amount) => setAmount(amount)}
               />
@@ -57,10 +57,10 @@ function App() {
             <div className="relative w-full h-0.5">
               <button
                 type="button"
-                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-none rounded-md backdrop-blur-sm bg-lime-500 text-white px-2 py-0.5 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300"
+                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-none rounded-md backdrop-blur-sm bg-lime-500 text-white px-2 py-0.5 hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300 ring-2 ring-blue-500/50"
                 onClick={swap}
               >
-                swap
+                swap 
               </button>
             </div>
             <div className="w-full mt-1 mb-4">
