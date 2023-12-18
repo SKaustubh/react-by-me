@@ -1,7 +1,7 @@
 
 
 let ClockHeading = () => {
-  return <h1>ClockHeading</h1>;
+  return <h1 className="fw-bold">ClockHeading</h1>;
 };
 
 export default ClockHeading;

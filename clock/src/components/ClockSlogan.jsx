@@ -1,9 +1,5 @@
+const ClockSlogan = () => {
+  return <h3 className="text-danger">ClockSlogan</h3>;
+};
 
-
-const ClockSlogan =() => {
-  return (
-    <h3>ClockSlogan</h3>
-  )
-}
-
-export default ClockSlogan
+export default ClockSlogan;
