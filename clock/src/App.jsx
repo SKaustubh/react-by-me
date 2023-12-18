@@ -26,7 +26,7 @@ function App() {
       <br />
       <br />
       <h1>healthy food</h1>
-      
+
       <ErrorMsg items= {food}></ErrorMsg>
       <FoodList items ={food}></FoodList>
     </>
