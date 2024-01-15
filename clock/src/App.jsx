@@ -5,6 +5,7 @@ import CurrentTime from "./components/CurrentTime";
 import "bootstrap/dist/css/bootstrap.min.css";
 import FoodList from "./components/FoodList";
 import ErrorMsg from "./components/ErrorMsg";
+import Container from "./components/Container";
 
 function App() {
   let food = ["apple", "banana", "orange", "mango", "grape"];
@@ -25,10 +26,15 @@ function App() {
       </div>
       <br />
       <br />
-      <h1>healthy food</h1>
+      <Container>
+        <h1 className="heading">healthy food</h1>
 
-      <ErrorMsg items= {food}></ErrorMsg>
-      <FoodList items ={food}></FoodList>
+        <ErrorMsg items={food}></ErrorMsg>
+        <FoodList items={food}></FoodList>
+      </Container>
+      <Container>
+        hello ks
+      </Container>
     </>
   );
 }
