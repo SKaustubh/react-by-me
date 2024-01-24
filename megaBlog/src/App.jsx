@@ -1,14 +1,44 @@
-
-import './App.css'
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.css";
+import authService from "./appwrite/auth";
+import { login, logout } from "./store/authSlice";
+import { Footer, Header } from "./components";
+import { Outlet } from "react-router-dom";
 
 function App() {
-  console.log(import.meta.env.VITE_APP_NAME)
+  const [loading, setLoading] = useState(true); //loader is used to show the loading screen for conditonal rendering
+  const dispatch = useDispatch(); //redux dispatch
 
-  return (
-    <>
-      <h1>ks</h1>
-    </>
-  )
+  useEffect(() => {
+    authService
+      .getCurrentUser()
+      .then((userData) => {
+        if (userData) {
+          dispatch(login({ userData }));
+        } else {
+          dispatch(logout());
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => setLoading(false));
+  }, []);
+
+  return !loading ?(
+   <div className="min-h-sc flex flex-wrap content-between bg-gray-400">
+    <div className="w-full">
+      <Header />
+      <main>
+        {
+          /*<Outlet />*/
+        }
+      </main>
+      <Footer/>
+    </div>
+   </div>
+  ):null
 }
 
-export default App
+export default App;
