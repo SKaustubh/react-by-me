@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { UseSelector } from "react-redux";
 
 function PostForm({ post }) {
-  const { register, handeSubmit, watch, setValue, control, getValues } =
+  const { register, handleSubmit, watch, setValue, control, getValues } =
     useForm({
       defaultValues: {
         title: post?.title || "",
