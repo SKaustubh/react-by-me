@@ -25,9 +25,9 @@ function App() {
   return !loading ? (
     <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
       <div className='w-full block'>
-        <Header />
+        <Header className='sticky top-0 z-50' /> {/* Add 'sticky' and positioning */}
         <main>
-        TODO:  <Outlet />
+          <Outlet />
         </main>
         <Footer />
       </div>
